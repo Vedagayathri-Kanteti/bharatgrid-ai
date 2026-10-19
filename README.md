@@ -80,7 +80,7 @@ BharatGrid includes localized substations, feeder types, and DISCOM mappings acr
 ## Running Locally
 
 ```bash
-git clone https://github.com/<your-username>/bharatgrid-ai.git
+git clone https://github.com/Vedagayathri-Kanteti/bharatgrid-ai.git
 cd bharatgrid-ai
 pip install -r requirements.txt
 streamlit run app.py
@@ -93,6 +93,7 @@ streamlit run app.py
 ```markdown
 BharatGrid - Climate-Adaptive Electricity Management System
 Live Demo: https://bharatgrid-ai.streamlit.app/
+GitHub: https://github.com/Vedagayathri-Kanteti/bharatgrid-ai
 Tech Stack: Python, Streamlit, Plotly, Pandas, Open-Meteo Satellite API
 
 - Built a hyper-local climate-adaptive power scheduling platform for Indian State DISCOMs 
