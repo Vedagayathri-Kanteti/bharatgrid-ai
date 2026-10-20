@@ -32,26 +32,37 @@ BharatGrid pulls hyper-local satellite weather data to automate grid scheduling:
 ---
 ## System Architecture
 
-```text
-Weather Data (Open-Meteo API)
-          |
-          v
-Weather Data Processing
-          |
-          v
-Climate-Aware Decision Engine
-          |
-          v
-Power Scheduling Simulation
-          |
-          v
-Energy Savings Calculation
-          |
-          v
-Streamlit Dashboard
-```
----
+BharatGrid combines weather forecasting, climate-aware decision-making, electricity scheduling, and energy savings estimation.
 
+```mermaid
+flowchart TD
+    A["Weather Forecast API<br/>Open-Meteo"] --> B["Weather Data Processing"]
+    B --> C["Climate-Aware Decision Engine"]
+    C --> D["Power Scheduling Simulator<br/>Up to 72 Hours"]
+    C --> G["Simulated Inter-District Allocation"]
+    D --> E["Energy Savings Estimation"]
+    G --> E
+    E --> F["Interactive Dashboard<br/>Streamlit and Plotly"]
+
+    style A fill:#dbeafe,stroke:#2563eb,color:#1e3a8a
+    style B fill:#ede9fe,stroke:#7c3aed,color:#4c1d95
+    style C fill:#ede9fe,stroke:#7c3aed,color:#4c1d95
+    style D fill:#ede9fe,stroke:#7c3aed,color:#4c1d95
+    style G fill:#ede9fe,stroke:#7c3aed,color:#4c1d95
+    style E fill:#d1fae5,stroke:#059669,color:#064e3b
+    style F fill:#d1fae5,stroke:#059669,color:#064e3b
+```
+
+### How It Works
+
+1. **Weather Forecasting:** Retrieves weather forecast data from Open-Meteo.
+2. **Data Processing:** Organizes weather and location information.
+3. **Decision Engine:** Applies weather-based rules to evaluate electricity management scenarios.
+4. **Power Scheduling:** Simulates electricity scheduling for up to 72 hours.
+5. **Energy Estimation:** Estimates potential energy savings.
+6. **Interactive Dashboard:** Displays schedules and results using Streamlit and Plotly.
+
+**Note:** BharatGrid is a simulation-based prototype and does not directly control real electricity infrastructure.
 ## Pan-India Coverage (All 36 States & UTs)
 
 BharatGrid includes localized substations, feeder types, and DISCOM mappings across India:
