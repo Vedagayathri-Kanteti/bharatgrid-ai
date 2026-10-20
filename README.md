@@ -30,6 +30,27 @@ BharatGrid pulls hyper-local satellite weather data to automate grid scheduling:
    * Simulates transferring conserved power from cool districts (e.g. hill stations or coastal areas) directly to heatwave-stressed plains and desert regions within the state grid.
 
 ---
+## System Architecture
+
+```text
+Weather Data (Open-Meteo API)
+          |
+          v
+Weather Data Processing
+          |
+          v
+Climate-Aware Decision Engine
+          |
+          v
+Power Scheduling Simulation
+          |
+          v
+Energy Savings Calculation
+          |
+          v
+Streamlit Dashboard
+```
+---
 
 ## Pan-India Coverage (All 36 States & UTs)
 
@@ -88,22 +109,9 @@ streamlit run app.py
 
 ---
 
-## Resume Summary
+# Author
+Vedagayathri Kanteti
 
-```markdown
-BharatGrid - Climate-Adaptive Electricity Management System
-Live Demo: https://bharatgrid-ai.streamlit.app/
-GitHub: https://github.com/Vedagayathri-Kanteti/bharatgrid-ai
-Tech Stack: Python, Streamlit, Plotly, Pandas, Open-Meteo Satellite API
+---
 
-- Built a hyper-local climate-adaptive power scheduling platform for Indian State DISCOMs 
-  (TSSPDCL, JVVNL, MSEDCL, BESCOM, etc.) covering all 36 Indian States and Union Territories.
-- Implemented an algorithmic feeder-switching policy that guarantees 100% uninterrupted power to 
-  homes during peak mid-afternoon heat (42°C-48°C) and schedules planned eco-cuts during cool weather.
-- Formulated an energy conservation engine quantifying hourly Watts, kWh, and Megawatts saved by 
-  leveraging natural cooling and ventilation in rural and urban communities.
-- Designed an intra-state grid balancer that simulates diverting conserved electricity 
-  from cool districts (e.g. Wayanad / Shimla) to heatwave-stressed villages (e.g. Phalodi / Nalgonda).
-- Developed an interactive DISCOM assistant engineer dashboard featuring 48-hour forward feeder timetables 
-  and real-time weather simulation controls.
-```
+
